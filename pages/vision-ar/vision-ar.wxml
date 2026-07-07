@@ -1,0 +1,8 @@
+<view class="vision-ar-page">
+  <camera class="camera-feed" device-position="back" flash="off" />
+  <canvas canvas-id="webgl" class="overlay-canvas" type="webgl"></canvas>
+  <view class="status-panel">
+    <text class="status-text">{{status}}</text>
+    <button wx:if="{{!cameraAuthorized}}" class="permission-button" bindtap="requestCameraPermission">开启摄像头权限</button>
+  </view>
+</view>

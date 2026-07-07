@@ -2,7 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/washer-launcher/washer-launcher",
-    "pages/washer-ar/washer-ar"
+    "pages/washer-ar/washer-ar",
+    "pages/vision-ar/vision-ar"
   ],
   "window": {
     "navigationBarTitleText": "AR Demo"

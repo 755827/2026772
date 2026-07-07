@@ -49,4 +49,9 @@ Page({
       url: '/pages/washer-ar/washer-ar',
     });
   },
+  startVisionAR() {
+    wx.navigateTo({
+      url: '/pages/vision-ar/vision-ar',
+    });
+  },
 });
