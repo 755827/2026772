@@ -1,0 +1,43 @@
+<page>
+<view class="container">
+  <!-- 第一排：黑猫、白猫 -->
+  <view class="row">
+    <view class="item-box">
+      <image src="/assets/blackcat/icon.png" class="logo" mode="aspectFit"></image>
+    </view>
+    <view class="item-box">
+      <image src="/assets/whitecat/icon.png" class="logo" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <!-- 第二排：洗衣机、烤面包机 -->
+  <view class="row">
+    <view class="item-box">
+      <image src="/assets/washer/icon.png" class="logo" mode="aspectFit" bindtap="goWasher"></image>
+    </view>
+    <view class="item-box">
+      <image src="/assets/toaster/icon.png" class="logo" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <!-- 第三排：马桶、垃圾桶 -->
+  <view class="row">
+    <view class="item-box">
+      <image src="/assets/toilet/icon.png" class="logo" mode="aspectFit"></image>
+    </view>
+    <view class="item-box">
+      <image src="/assets/garbagebin/icon.png" class="logo" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <!-- 第四排：打印机、吸尘器 -->
+  <view class="row">
+    <view class="item-box">
+      <image src="/assets/printer/icon.png" class="logo" mode="aspectFit"></image>
+    </view>
+    <view class="item-box">
+      <image src="/assets/cleaner/icon.png" class="logo" mode="aspectFit"></image>
+    </view>
+  </view>
+</view>
+</page>

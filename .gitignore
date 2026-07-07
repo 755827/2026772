@@ -1,0 +1,26 @@
+# Node
+node_modules/
+
+# WeChat/miniprogram build and local
+dist/
+build/
+
+# VS Code
+.vscode/
+
+# Local config
+project.private.config.json
+
+# Logs
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# npm
+package-lock.json
+
+# temp
+*.tmp
+*.log

@@ -1,0 +1,52 @@
+page {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+/*background: #fff：整个小程序页面背景为纯白色
+margin: 0; padding: 0：清除页面自带默认内外边距，避免系统自带留白打乱布局*/
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100rpx 40rpx 220rpx;
+  /*padding: 100rpx 40rpx 200rpx 四边留白，顺序：上、左右、下
+顶部距离屏幕边缘：100rpx
+左右两侧距离屏幕边缘：40rpx
+底部距离屏幕边缘：220rpx（你要的加大底部距离就是改这个数字）*/
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* 控制4排之间的上下空隙，数值越小越紧凑 */
+  gap: 10rpx;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.item-box {
+  width: 240rpx;
+  height: 240rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.washer-click .icon {
+  transition: transform 0.18s ease;
+}
+
+.washer-active .icon {
+  transform: scale(1.05);
+}

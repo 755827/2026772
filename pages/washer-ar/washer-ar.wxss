@@ -1,0 +1,23 @@
+.ar-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.camera {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.ar-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.ar-hint {
+  position: absolute;
+  bottom: 20rpx;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+/* pages/washer-ar/washer-ar.wxss */

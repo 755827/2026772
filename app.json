@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/washer-launcher/washer-launcher",
+    "pages/washer-ar/washer-ar"
+  ],
+  "window": {
+    "navigationBarTitleText": "AR Demo"
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.camera": {
+      "desc": "拍摄 AR 场景所需摄像头权限"
+    }
+  },
+
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  }
+}

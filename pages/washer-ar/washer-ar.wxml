@@ -1,0 +1,34 @@
+<!-- pages/washer-ar/washer-ar.wxml -->
+<view class="ar-page">
+  <xr-scene ar-system="modes:Marker" bind:ready="handleReady" bind:ar-ready="handleARReady" bind:log="handleLog">
+    <xr-assets bind:progress="handleAssetsProgress" bind:loaded="handleAssetsLoaded">
+      <xr-asset-load type="gltf" asset-id="gltf" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/butterfly/index.glb" />
+    </xr-assets>
+    <xr-env env-data="xr-frame-team-workspace-day" />
+    <xr-node node-id="cameraNode">
+      <xr-camera id="camera" node-id="camera" position="0.8 2.2 -5" clear-color="0.925 0.925 0.925 1" background="ar" is-ar-camera />
+    </xr-node>
+    <xr-node wx:if="{{arReady}}">
+      <xr-ar-tracker mode="Marker" src="{{markerImg}}" bind:state="handleARTrackerState" bind:error="handleARTrackerError">
+        <xr-gltf model="gltf" anim-autoplay position="0.2 0 -0.2" scale="0.6 0.6 0.6" rotation="0 -50 0" />
+      </xr-ar-tracker>
+    </xr-node>
+    <xr-node node-id="lights">
+      <xr-light type="ambient" color="1 1 1" intensity="1" />
+      <xr-light type="directional" rotation="180 0 0" color="1 1 1" intensity="3" />
+    </xr-node>
+  </xr-scene>
+  <view wx:if="{{!cameraAuthorized}}" class="camera-denied">
+    <text class="permission-tip">请允许摄像头权限后再进入 AR。</text>
+    <button class="permission-btn" bindtap="requestCameraPermission">重新授权摄像头</button>
+  </view>
+  <view class="ar-status">
+    <text>摄像头授权：{{cameraAuthorized}}</text>
+    <text>识别状态：{{arTrackerState}}</text>
+    <text wx:if="{{arTrackerError}}">错误：{{arTrackerError}}</text>
+    <view class="change-marker">
+      <button bindtap="handleChangeMarkerImg">更换 Marker</button>
+    </view>
+  </view>
+</view>
+

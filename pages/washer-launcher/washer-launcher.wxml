@@ -1,0 +1,9 @@
+<!-- pages/washer-launcher/washer-launcher.wxml -->
+<view class="launcher-container">
+	<view class="device-preview">
+		<image src="/assets/washer/preview.png" mode="aspectFit" class="preview-img"></image>
+	</view>
+	<view class="actions">
+		<button class="start-btn" bindtap="startExperience">开始体验</button>
+	</view>
+</view>
